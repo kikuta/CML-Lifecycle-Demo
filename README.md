@@ -8,14 +8,27 @@
 
 ![Lab lifecycle with CML](./SS1.png)
 
-## 1. Get authentication Token
+## Preparation. Change env_lab.py.yourifle to env_lab.py
+
+env_lab.py must include the ip address of your CML, username, and password. You have to change the filename and host/username/password in it.
+
+```
+% cat env_lab.py.yourconfig 
+CML = {
+    "host": "<cml_ip_address>",
+    "username": "<username>",
+    "password": "<password>"
+}
+```
+
+## Demo 1.  Get authentication Token
 ### auth.py
 ```
 % python auth.py 
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uY2lzY28udmlybCIsImlhdCI6MTU5NjQzNzc0NywiZXhwIjoxNTk2NTI0MTQ3LCJzdWIiOiIxMDEifQ.-csBly7oKqiN8WOcpm7uQFPL2PDiVp__sHAkaLk3NMc
 ```
 
-## 2. Get Simulated labs information on CML
+## Demo 2. Get Simulated labs information on CML
 ### hellocml.py
 ```
 % python hellocml.py 
@@ -44,7 +57,7 @@ guestshell-testmaru                       2020-07-22 11:54:07   STOPPED         
 #################################################################################################################
 ```
 
-## 3. Import and start a lab simulation with lab file (yaml)
+## Demo 3. Import and start a lab simulation with lab file (yaml)
 ### import.py
 ### test-topology.yaml
 
@@ -59,7 +72,7 @@ test-topology.yaml
 <Response [200]>
 ```
 
-## 4. Delete a simulated lab
+## Demo 4. Delete a simulated lab
 ### delete.py
 ```
 % python delete.py                   
@@ -67,7 +80,7 @@ Please input lab ID to be deleted? [type q to quit]: 42aaf9
 <Response [200]>
 ```
 
-## 5. Get a testbed file (yaml) for pyATS
+## Demo 5. Get a testbed file (yaml) for pyATS
 ### pyats_testbed.py
 ```
 % python pyats_testbed.py 
@@ -420,4 +433,11 @@ pyatsTb_48cadf.yaml
 ```
 
 ## Reference
-[CML2.0 on Cisco DevNet](https://developer.cisco.com/modeling-labs/)
+
+* [CML2.0 on Cisco DevNet](https://developer.cisco.com/modeling-labs/)
+
+* [Cisco Modeling Labs (CML)を使ってネットワークを学ぼう！（基礎編）](https://learningnetwork.cisco.com/s/article/jp-webinar-cml01)
+
+* [Cisco Modeling Labs (CML)を使ってネットワークを学ぼう！（応用編）](https://learningnetwork.cisco.com/s/article/jp-webinar-cml02)
+
+* [Cisco Modeling Labs (CML)を使ってネットワークを学ぼう！（DevNet編）](https://learningnetwork.cisco.com/s/article/jp-webinar-cml03)

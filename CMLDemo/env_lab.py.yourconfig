@@ -1,5 +1,5 @@
 CML = {
-    "host": "<cml_ip_address>3",
+    "host": "<cml_ip_address>",
     "username": "<username>",
     "password": "<password>"
 }
