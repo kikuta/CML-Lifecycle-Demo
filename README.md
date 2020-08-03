@@ -4,7 +4,7 @@
 * CML2.0 supports lightweight and easy-to-use GUI as well as over 130 APIs
 * Not only getting lab simulations information but also creating/deleting labs with configuration files by code
 * CML APIs helps CI/CD, NetDevOps :-)
-* To start learning CML APIs, it would be great to start following demos/hands-on.
+* To start learning CML APIs, it would be great to start following demos/hands-on. Enjoy!
 
 ![Lab lifecycle with CML](./SS1.png)
 
