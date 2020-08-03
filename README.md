@@ -1,4 +1,6 @@
-# Cisco Modeling Labs (CML) API Demo
+# Cisco Modeling Labs (CML) API Demo for simulation lifecycle
+
+![Lab lifecycle with CML](./SS1.png)
 
 ## 1. Get authentication Token
 ### auth.py
