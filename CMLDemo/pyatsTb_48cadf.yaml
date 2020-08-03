@@ -1,67 +1,3 @@
-# Cisco Modeling Labs (CML) API Demo for simulation lifecycle
-
-![Lab lifecycle with CML](./SS1.png)
-
-## 1. Get authentication Token
-### auth.py
-```
-% python auth.py 
-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uY2lzY28udmlybCIsImlhdCI6MTU5NjQzNzc0NywiZXhwIjoxNTk2NTI0MTQ3LCJzdWIiOiIxMDEifQ.-csBly7oKqiN8WOcpm7uQFPL2PDiVp__sHAkaLk3NMc
-```
-
-## 2. Get Simulated labs information on CML
-### hellocml.py
-```
-% python hellocml.py 
-#################################################################################################################
-# Simulated labs on CML: 19 at CML Lab 10.71.154.73
-#################################################################################################################
-Test by tatsaito                          2020-06-11 13:33:46   STOPPED           https://10.71.154.73/lab/866cb6
-test by rmaruyam                          2020-06-11 09:17:08   DEFINED_ON_CORE   https://10.71.154.73/lab/b3a6eb
-To DNAC96                                 2020-06-17 05:01:40   STARTED           https://10.71.154.73/lab/2ba4d1
-test by asai                              2020-06-17 07:21:17   STOPPED           https://10.71.154.73/lab/eeca34
-CML-DevNet-Lab                            2020-06-22 11:16:04   STARTED           https://10.71.154.73/lab/48cadf
-TEST Lab asai                             2020-06-23 17:42:14   STOPPED           https://10.71.154.73/lab/72cbd5
-Lab asai                                  2020-06-24 11:00:16   STOPPED           https://10.71.154.73/lab/0fbd5d
-TEST Lab asai                             2020-06-24 13:17:08   STOPPED           https://10.71.154.73/lab/f2d3c5
-asai                                      2020-06-25 13:36:02   STOPPED           https://10.71.154.73/lab/0574e5
-CML Basic Lab                             2020-06-26 13:37:36   STOPPED           https://10.71.154.73/lab/deaf38
-manual_config_live_vis_configured.virl    2020-06-29 04:11:33   STOPPED           https://10.71.154.73/lab/80bbfd
-Nov_webinar_demo_topology.virl            2020-06-29 06:25:31   DEFINED_ON_CORE   https://10.71.154.73/lab/65ccf2
-July_webinar_ospf_eigrp.virl              2020-06-29 06:37:50   DEFINED_ON_CORE   https://10.71.154.73/lab/609fbc
-Mar15_webinar_l2_unmanaged.virl           2020-06-29 06:38:18   DEFINED_ON_CORE   https://10.71.154.73/lab/bae85c
-maruyama-API-Lab                          2020-07-19 09:07:25   STOPPED           https://10.71.154.73/lab/ebbddc
-test-topology-kikuta                      2020-07-20 13:23:37   DEFINED_ON_CORE   https://10.71.154.73/lab/94d9b1
-pyATS-test                                2020-07-21 03:08:31   STOPPED           https://10.71.154.73/lab/dede52
-Lab at Tue 13:34 PM                       2020-07-21 13:34:27   DEFINED_ON_CORE   https://10.71.154.73/lab/26fbfb
-guestshell-testmaru                       2020-07-22 11:54:07   STOPPED           https://10.71.154.73/lab/1bbb3d
-#################################################################################################################
-```
-
-## 3. Import and start a lab simulation with lab file (yaml)
-### import.py
-### test-topology.yaml
-
-```
-% python import.py test-topology.yaml 
-Please input an lab title [type q to quit]: test-by-kikuta
-test-topology.yaml
-<Response [200]>
-```
-
-## 4. Delete a simulated lab
-### delete.py
-```
-% python delete.py                   
-Please input lab ID to be deleted? [type q to quit]: 42aaf9
-<Response [200]>
-```
-
-## 5. Get a testbed file (yaml) for pyATS
-### pyats_testbed.py
-```
-% python pyats_testbed.py 
-Please input lab ID to be deleted? [type q to quit]: 48cadf
 testbed:
   name: CML-DevNet-Lab
   tacacs:
@@ -403,8 +339,3 @@ topology:
       GigabitEthernet4:
         link: l17
         type: ethernet
-```
-```
-% ls | grep 48cadf
-pyatsTb_48cadf.yaml
-```
