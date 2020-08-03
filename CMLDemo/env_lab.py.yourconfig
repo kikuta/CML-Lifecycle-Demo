@@ -1,0 +1,5 @@
+CML = {
+    "host": "<cml_ip_address>3",
+    "username": "<username>",
+    "password": "<password>"
+}

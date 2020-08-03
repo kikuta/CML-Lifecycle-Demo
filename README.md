@@ -1,5 +1,11 @@
 # Cisco Modeling Labs (CML) API Demo for simulation lifecycle
 
+* [CML2.0](https://developer.cisco.com/modeling-labs/) is network simulation platform by Cisco including Routers/Switches/Servers and more.
+* CML2.0 supports lightweight and easy-to-use GUI as well as over 130 APIs
+* Not only getting lab simulations information but also creating/deleting labs with configuration files by code
+* CML APIs helps CI/CD, NetDevOps
+* To start learning CML APIs, it would be great to start following demos/hands-on.
+
 ![Lab lifecycle with CML](./SS1.png)
 
 ## 1. Get authentication Token
@@ -41,6 +47,10 @@ guestshell-testmaru                       2020-07-22 11:54:07   STOPPED         
 ## 3. Import and start a lab simulation with lab file (yaml)
 ### import.py
 ### test-topology.yaml
+
+Please note you must have yaml file to import the lab. From CML GUI, you can download the yaml file, share it with team, or you can find yaml file on community like github.
+
+![Lab YAML file download from GUI](./SS2.png)
 
 ```
 % python import.py test-topology.yaml 
@@ -408,3 +418,6 @@ topology:
 % ls | grep 48cadf
 pyatsTb_48cadf.yaml
 ```
+
+## Reference
+[CML2.0 on Cisco DevNet](https://developer.cisco.com/modeling-labs/)
