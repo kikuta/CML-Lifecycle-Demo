@@ -8,6 +8,7 @@
 * CML APIs helps CI/CD, NetDevOps :-)
 * To start learning CML APIs, it would be great to start following five demos/hands-on.
 * Five demos are python3 script on your machine and connecting to your CML2.x server
+* Enjoy!
 
 ![Lab lifecycle with CML](./SS1.png)
 
