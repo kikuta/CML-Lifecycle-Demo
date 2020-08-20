@@ -6,11 +6,39 @@
 * CML2.0 supports lightweight and easy-to-use GUI as well as over 130 APIs
 * Not only getting lab simulations information but also creating/deleting labs with configuration files by code
 * CML APIs helps CI/CD, NetDevOps :-)
-* To start learning CML APIs, it would be great to start following five demos/hands-on. Enjoy!
+* To start learning CML APIs, it would be great to start following five demos/hands-on.
+* Five demos are python3 script on your machine and connecting to your CML2.x server
 
 ![Lab lifecycle with CML](./SS1.png)
 
-## Preparation. Change env_lab.py.yourifle to env_lab.py
+## Installation
+
+### 1.  Clone the repo
+```
+git clone https://github.com/kikuta/CML-Lifecycle-Demo.git
+```
+
+### 2.  cd into directory
+```
+cd CML-Lifecycle-Demo
+```
+
+### 3. Create the virtual environment in a sub dir in the same directory
+```
+python3 -m venv venv
+```
+
+### 4. Start the virtual environment and install requirements.txt and cd into script directory
+```
+source venv/bin/activate
+pip install -r requirements.txt
+cd CMLDemo
+```
+
+### 5. Change env_lab.py.yourifle to env_lab.py
+```
+mv env_lab.py.yourconfig env_lab.py
+```
 
 env_lab.py must include the ip address of your CML, username, and password. You have to change the filename and host/username/password in it.
 
