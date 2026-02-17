@@ -1,4 +1,5 @@
 CMLDemo/__pycache__
 env_lab.py
 .DS_Store
-./archive/*
+archive/*
+.venv/
